@@ -69,7 +69,9 @@ Ghost מספק **16 פונקציות חיזוק Windows** בנוסף ל-**אינ
 ### הערכת אבטחה
 ```powershell
 # טעינת מודול Ghost
-IEX(Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1')
+Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1' -OutFile .\Ghost.ps1
+Get-Content .\Ghost.ps1
+. .\Ghost.ps1
 
 # בדיקת מצב אבטחה נוכחי
 Get-Ghost
@@ -97,7 +99,9 @@ Set-Ghost -SMBv1 -RDP -USBStorage -Intune
 
 ### אפשרות 1: הורדה ישירה (בדיקות)
 ```powershell
-IEX(Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1')
+Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1' -OutFile .\Ghost.ps1
+Get-Content .\Ghost.ps1
+. .\Ghost.ps1
 ```
 
 ### אפשרות 2: התקנת מודול
